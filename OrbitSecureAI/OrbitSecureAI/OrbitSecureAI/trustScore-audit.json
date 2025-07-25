@@ -1,0 +1,34 @@
+{
+  "auditLog": [
+    {
+      "userId": "USER-01458",
+      "timestamp": "2025-07-25T13:45:10Z",
+      "eventId": "DLV-LATE-24",
+      "module": "OrbitDeliver",
+      "action": "Late delivery >24h",
+      "scoreChange": -5,
+      "outcome": "Warning issued",
+      "reviewedBy": "Auto"
+    },
+    {
+      "userId": "USER-03179",
+      "timestamp": "2025-07-25T13:58:42Z",
+      "eventId": "CON-ID-FAKE",
+      "module": "OrbitConnect",
+      "action": "Falsified ID submitted",
+      "scoreChange": -40,
+      "outcome": "Identity locked",
+      "reviewedBy": "Admin-MGR-2"
+    },
+    {
+      "userId": "USER-00991",
+      "timestamp": "2025-07-25T14:03:22Z",
+      "eventId": "FIN-DEFAULT-01",
+      "module": "OrbitFinance",
+      "action": "Loan default",
+      "scoreChange": -25,
+      "outcome": "Score deduction",
+      "reviewedBy": "Auto"
+    }
+  ]
+}
