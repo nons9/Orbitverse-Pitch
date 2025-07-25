@@ -1,0 +1,23 @@
+{
+  "recentEvents": [
+    {
+      "userId": "USER-01458",
+      "module": "OrbitDeliver",
+      "action": "Delivery >24h late",
+      "scoreImpact": -5,
+      "outcome": "Warning issued",
+      "moderationLevel": "Auto",
+      "timestamp": "2025-07-25T13:45:10Z"
+    },
+    {
+      "userId": "USER-03179",
+      "module": "OrbitConnect",
+      "action": "Fake identity submitted",
+      "scoreImpact": -40,
+      "outcome": "Identity locked",
+      "moderationLevel": "Manual",
+      "moderator": "Admin-MGR-2",
+      "timestamp": "2025-07-25T13:58:42Z"
+    }
+  ]
+}
