@@ -1,0 +1,29 @@
+{
+  "roles": [
+    {
+      "role": "Auto-Mod",
+      "permissions": [
+        "Trigger flag based on thresholds",
+        "Issue score warnings",
+        "Submit cases to human review"
+      ]
+    },
+    {
+      "role": "Moderator",
+      "permissions": [
+        "View all flagged cases",
+        "Respond to appeals",
+        "Lock/unlock identities",
+        "Approve recovery actions"
+      ]
+    },
+    {
+      "role": "System Viewer",
+      "permissions": [
+        "View flag history",
+        "Access audit feed",
+        "Monitor contributor scores"
+      ]
+    }
+  ]
+}
