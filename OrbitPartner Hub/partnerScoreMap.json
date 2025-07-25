@@ -1,0 +1,28 @@
+{
+  "contributorAPIAccess": {
+    "basic": {
+      "minScore": 40,
+      "badge": "Active Contributor"
+    },
+    "advanced": {
+      "minScore": 70,
+      "badge": "Verified Integrator"
+    },
+    "adminTier": {
+      "minScore": 90,
+      "badge": "Ecosystem Architect"
+    }
+  },
+  "externalPlatformAccess": {
+    "reviewRequired": true,
+    "minGovernanceScore": 60,
+    "verifiedBy": "OrbitSecureAI",
+    "badgePath": "OrbitCertified Partner"
+  },
+  "penaltyHooks": {
+    "scoreDrop": {
+      "trigger": "API misuse or rate abuse",
+      "action": "Access suspended + review log"
+    }
+  }
+}
