@@ -1,0 +1,12 @@
+{
+  "contentModeration": [
+    {
+      "postId": "POST-8447",
+      "userId": "USER-03179",
+      "event": "Comment spam",
+      "action": "Auto-flag",
+      "severity": 10,
+      "status": "Pending"
+    }
+  ]
+}
