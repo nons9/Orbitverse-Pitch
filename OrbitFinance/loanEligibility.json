@@ -1,0 +1,8 @@
+{
+  "merchantId": "MCH-5050",
+  "monthlyVolume": 120000,
+  "refundRate": 0.02,
+  "trustScore": 77.5,
+  "loanApproved": true,
+  "maxLoanAmount": 15000
+}
