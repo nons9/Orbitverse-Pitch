@@ -1,0 +1,20 @@
+{
+  "routeStart": {
+    "trigger": "GPS lock confirmed",
+    "action": "Start delivery score tracking"
+  },
+  "zoneDeviation": {
+    "trigger": "Courier leaves assigned path",
+    "event": "reroute",
+    "action": "Log deviation and notify user"
+  },
+  "missedDrop": {
+    "trigger": "No delivery confirmation within 15 mins of GPS arrival",
+    "event": "missedPickup",
+    "action": "Alert operations team"
+  },
+  "feedbackTrigger": {
+    "trigger": "User submits delivery rating",
+    "action": "Update trust score"
+  }
+}
