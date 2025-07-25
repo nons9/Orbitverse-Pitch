@@ -1,0 +1,32 @@
+{
+  "deliveryEvents": {
+    "onTime": { "score": +5, "message": "Delivery completed on time" },
+    "lateDelivery": { "score": -3, "violation": true, "action": "Warn courier" },
+    "missedPickup": { "score": -5, "violation": true, "action": "Log incident" },
+    "reroute": { "score": -1, "message": "Route deviation logged" }
+  },
+  "complaints": {
+    "itemDamaged": {
+      "score": -6,
+      "resolutionPath": ["Notify courier", "Review audit log", "Enable user dispute"]
+    },
+    "courierRudeness": {
+      "score": -3,
+      "resolutionPath": ["Send apology trigger", "Review communication logs"]
+    },
+    "missingItem": {
+      "score": -10,
+      "violation": true,
+      "resolutionPath": ["Initiate lock", "Escalate to OrbitSecureAI", "Trigger refund review"]
+    }
+  },
+  "trustRecovery": {
+    "positiveFeedback": { "score": +2 },
+    "incidentAppealWon": { "score": +5 },
+    "verifiedDeliveryStreak": {
+      "count": 5,
+      "scoreBonus": +8,
+      "label": "Trust Restored"
+    }
+  }
+}
