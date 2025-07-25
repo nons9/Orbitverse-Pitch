@@ -1,0 +1,20 @@
+{
+  "scoreEvents": [
+    {
+      "userId": "USER-30941",
+      "baseScore": 83,
+      "event": "Escrow mismatch",
+      "severity": 15,
+      "action": "Violation",
+      "newScore": 68
+    },
+    {
+      "userId": "USER-30941",
+      "baseScore": 68,
+      "event": "Escrow cleared",
+      "severity": 10,
+      "action": "Recovery",
+      "newScore": 78
+    }
+  ]
+}
