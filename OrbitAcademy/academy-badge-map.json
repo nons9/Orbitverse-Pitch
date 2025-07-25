@@ -1,0 +1,32 @@
+{
+  "badges": {
+    "Verified Courier": {
+      "requiredModules": ["GPS Routing & Delivery Ethics", "Delivery Simulation"],
+      "minScore": 60,
+      "issuer": "OrbitAcademy"
+    },
+    "Verified Seller": {
+      "requiredModules": ["Marketplace Fraud Detection", "Escrow Trust"],
+      "minScore": 55,
+      "issuer": "OrbitAcademy"
+    },
+    "OrbitModerator": {
+      "requiredModules": ["OrbitTrust Framework", "Recovery Flow"],
+      "minScore": 75,
+      "issuer": "OrbitSecureAI"
+    },
+    "Trusted Partner": {
+      "requiredModules": ["Partner Badging & Verified Integration", "Score Screening"],
+      "minScore": 70,
+      "issuer": "OrbitPartnerHub"
+    }
+  },
+  "scoreRecoveryBonus": {
+    "postModulePass": +5,
+    "appealWin": +8,
+    "consistentParticipation": {
+      "count": 7,
+      "bonus": +10
+    }
+  }
+}
