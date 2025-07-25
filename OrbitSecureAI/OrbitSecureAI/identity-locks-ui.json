@@ -1,0 +1,22 @@
+{
+  "lockedProfiles": [
+    {
+      "userId": "USER-03179",
+      "lockReason": "Falsified ID document",
+      "score": 34,
+      "timestampLocked": "2025-07-25T13:58:42Z",
+      "canAppeal": true,
+      "status": "Locked",
+      "reviewDue": "2025-07-28T13:58:42Z"
+    },
+    {
+      "userId": "USER-21944",
+      "lockReason": "Repeated trade violations",
+      "score": 29,
+      "timestampLocked": "2025-07-24T10:17:00Z",
+      "canAppeal": false,
+      "status": "Locked",
+      "notes": "System override triggered"
+    }
+  ]
+}
