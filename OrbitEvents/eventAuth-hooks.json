@@ -1,0 +1,28 @@
+{
+  "accessTriggers": {
+    "hostCreation": {
+      "minTrustScore": 65,
+      "requiredBadge": "Verified Contributor",
+      "identityVerified": true
+    },
+    "attendeeJoin": {
+      "minTrustScore": 40,
+      "spamHistoryCheck": true,
+      "accountAge": "≥ 7 days"
+    }
+  },
+  "moderationHooks": {
+    "postEventSpam": {
+      "trigger": "message flagged by 3+ attendees",
+      "action": "Auto-mute & log for review"
+    },
+    "impersonationAttempt": {
+      "trigger": "unverified host badge",
+      "action": "Event creation blocked + alert sent"
+    },
+    "trustedRecovery": {
+      "trigger": "positive event feedback",
+      "action": "Score boost + badge reinstatement review"
+    }
+  }
+}
