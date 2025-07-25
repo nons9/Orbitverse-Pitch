@@ -1,5 +1,9 @@
 OrbitVerse Holdings Inc.
-Africa’s logistics-tech ecosystem connecting trade, delivery, finance, and trust.
+Africa’s logistics tech ecosystem connects trade, delivery, finance, and trust. 
+
+Trust Powered Commerce. OrbitVerse is Africa’s open-source logistics tech ecosystem with verified delivery, secure trade, and dynamic contributor governance. OrbitTrust empowers users to earn reputations, unlock perks, and moderate ethically through transparent score mechanics, contributor audits, and badge-based incentives.
+
+Not just scalable. Accountable.
 
 Divisions
 [OrbitExpress • OrbitMart • OrbitTrade • OrbitGroups • OrbitFinance • OrbitSecure AI • OrbitAcademy • OrbitEvents • OrbitPartner Hub]
