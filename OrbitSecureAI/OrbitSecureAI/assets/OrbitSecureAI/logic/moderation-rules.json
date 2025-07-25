@@ -1,0 +1,10 @@
+{
+  "scoreThresholds": {
+    "warning": -5,
+    "review": -15,
+    "identityLock": -40
+  },
+  "recoveryEnabled": true,
+  "recoveryMethods": ["communityAppeal", "identityResubmission", "adminOverride"],
+  "notificationRoles": ["admin", "securityManager", "regionalLead"]
+}
