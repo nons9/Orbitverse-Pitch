@@ -1,0 +1,19 @@
+{
+  "checkSellerActivity": {
+    "inputs": ["loginFrequency", "ipLocation", "deviceType", "orderCancellations"],
+    "rules": [
+      {
+        "ruleId": "FRAUD001",
+        "condition": "loginFrequency > 15 && ipLocation != registeredRegion",
+        "riskLevel": "high",
+        "action": "flagSeller"
+      },
+      {
+        "ruleId": "FRAUD002",
+        "condition": "orderCancellations > 3 && recentSignUp == true",
+        "riskLevel": "medium",
+        "action": "delayPayout"
+      }
+    ]
+  }
+}
