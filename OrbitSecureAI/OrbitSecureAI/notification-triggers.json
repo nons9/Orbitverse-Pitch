@@ -1,0 +1,34 @@
+{
+  "notifications": [
+    {
+      "triggerType": "Flag raised",
+      "userId": "USER-30941",
+      "module": "OrbitTrade",
+      "severity": 15,
+      "timestamp": "2025-07-25T14:00:15Z",
+      "targetAudience": "Moderator"
+    },
+    {
+      "triggerType": "Appeal received",
+      "userId": "USER-03179",
+      "module": "OrbitConnect",
+      "timestamp": "2025-07-25T14:10:00Z",
+      "targetAudience": "Moderator"
+    },
+    {
+      "triggerType": "Identity locked",
+      "userId": "USER-21944",
+      "module": "OrbitTrade",
+      "timestamp": "2025-07-24T10:17:00Z",
+      "targetAudience": "User"
+    },
+    {
+      "triggerType": "Score recovery",
+      "userId": "USER-01458",
+      "module": "OrbitDeliver",
+      "impact": "+4",
+      "timestamp": "2025-07-25T14:15:30Z",
+      "targetAudience": "User"
+    }
+  ]
+}
