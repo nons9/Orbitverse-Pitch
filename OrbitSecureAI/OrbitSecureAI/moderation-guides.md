@@ -69,38 +69,3 @@ This guide explains how contributor moderation works across OrbitVerse modules, 
 
 
 Orbital trust needs clarity. This guide ensures fairness, transparency, and modular resolution
-
-<table>
-  <thead>
-    <tr>
-      <th>Case ID</th>
-      <th>User</th>
-      <th>Module</th>
-      <th>Event</th>
-      <th>Severity</th>
-      <th>Status</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CASE-00358</td>
-      <td>USER-03179</td>
-      <td>OrbitConnect</td>
-      <td>Fake identity submitted</td>
-      <td><span class="badge red">40</span></td>
-      <td>Pending Review</td>
-      <td><button>Review Appeal</button></td>
-    </tr>
-    <tr>
-      <td>CASE-00359</td>
-      <td>USER-30941</td>
-      <td>OrbitTrade</td>
-      <td>Escrow mismatch</td>
-      <td><span class="badge orange">15</span></td>
-      <td>Review Complete</td>
-      <td><button>Confirm Recovery</button></td>
-    </tr>
-  </tbody>
-</table>
-
