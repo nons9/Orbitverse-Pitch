@@ -1,0 +1,12 @@
+{
+  "financeModeration": [
+    {
+      "loanId": "LOAN-92712",
+      "userId": "USER-19422",
+      "event": "Defaulted repayment",
+      "action": "Trigger flag",
+      "severity": 25,
+      "status": "Flagged"
+    }
+  ]
+}
