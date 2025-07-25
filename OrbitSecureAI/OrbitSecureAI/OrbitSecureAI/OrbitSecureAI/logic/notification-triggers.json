@@ -1,0 +1,34 @@
+{
+  "alertTypes": {
+    "warning": {
+      "scoreThreshold": -5,
+      "rolesNotified": ["regionalLead"],
+      "notifyOnRepeat": true
+    },
+    "reviewRequired": {
+      "scoreThreshold": -15,
+      "rolesNotified": ["admin", "securityManager"],
+      "reviewWindow": "72h"
+    },
+    "identityLock": {
+      "scoreThreshold": -40,
+      "rolesNotified": ["admin", "complianceTeam", "regionalLead"],
+      "notifyImmediately": true,
+      "requiresAudit": true
+    }
+  },
+  "deliveryChannels": ["email", "SMS", "OrbitAdmin dashboard"],
+  "throttle": {
+    "maxAlertsPerContributor": 3,
+    "cooldownPeriodHours": 24
+  },
+  "customRoles": {
+    "securityManager": {
+      "canOverride": true,
+      "receivesFullAudit": true
+    },
+    "regionalLead": {
+      "seesOnlyLocalEvents": true
+    }
+  }
+}
