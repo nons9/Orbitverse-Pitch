@@ -1,0 +1,25 @@
+/* Base slides background */
+.reveal {
+  background-color: #ffffff;
+}
+
+/* Text colors */
+.reveal .slides section {
+  color: #1E3A8A;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/* Body text and lists */
+p, li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Accent highlights */
+.highlight {
+  color: #F59E0B;
+}
