@@ -1,0 +1,22 @@
+{
+  "appeals": [
+    {
+      "userId": "USER-03179",
+      "module": "OrbitConnect",
+      "flagType": "Identity falsification",
+      "reason": "Genuine ID submitted via secondary method",
+      "status": "Pending moderator review",
+      "timestampSubmitted": "2025-07-25T14:10:00Z",
+      "expectedResponseBy": "2025-07-27T14:10:00Z"
+    },
+    {
+      "userId": "USER-21944",
+      "module": "OrbitTrade",
+      "flagType": "Trade violations",
+      "reason": "Claimed incorrect vendor tagging",
+      "status": "Auto-rejected",
+      "timestampSubmitted": "2025-07-25T13:42:15Z",
+      "expectedResponseBy": "2025-07-26T13:42:15Z"
+    }
+  ]
+}
