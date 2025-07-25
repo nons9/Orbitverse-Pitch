@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "mod": {
+      "permissions": ["muteUser", "flagContent", "rotateModerator", "accessAuditLog"],
+      "visibilityTier": "badgeRequired",
+      "scoreThreshold": 75
+    },
+    "host": {
+      "permissions": ["createGroup", "assignMods", "editRules", "pinMessages"],
+      "visibilityTier": "verifiedOnly",
+      "scoreThreshold": 60
+    },
+    "seller": {
+      "permissions": ["postInMarketplace", "respondToDMs", "joinLounges"],
+      "visibilityTier": "public",
+      "scoreThreshold": 40
+    }
+  },
+  "defaultRole": "seller",
+  "trustEscalation": {
+    "verifiedEngagement": { "threshold": 5, "upgradeTo": "host" },
+    "moderationImpact": { "positiveReports": 3, "upgradeTo": "mod" }
+  }
+}
