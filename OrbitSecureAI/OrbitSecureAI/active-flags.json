@@ -1,0 +1,24 @@
+{
+  "flags": [
+    {
+      "userId": "USER-30941",
+      "event": "Escrow mismatch",
+      "module": "OrbitTrade",
+      "severity": 15,
+      "scoreBefore": 83,
+      "scoreAfter": 68,
+      "status": "Under review",
+      "timestamp": "2025-07-25T14:00:15Z"
+    },
+    {
+      "userId": "USER-19422",
+      "event": "Loan default",
+      "module": "OrbitFinance",
+      "severity": 25,
+      "scoreBefore": 72,
+      "scoreAfter": 47,
+      "status": "Flagged",
+      "timestamp": "2025-07-25T13:49:10Z"
+    }
+  ]
+}
