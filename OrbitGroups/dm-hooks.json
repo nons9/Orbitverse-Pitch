@@ -1,0 +1,31 @@
+{
+  "chatEvents": {
+    "messageSent": {
+      "log": true,
+      "fields": ["sender", "receiver", "timestamp", "content"]
+    },
+    "messageFlagged": {
+      "trigger": ["spam", "harassment", "impersonation"],
+      "action": "autoMuteSender",
+      "log": true
+    },
+    "messageDeleted": {
+      "trigger": "modAction",
+      "log": true
+    }
+  },
+  "spamDetection": {
+    "patternTriggers": ["Buy now", "Click this link", "Fast cash"],
+    "rateLimit": {
+      "maxMessagesPerMinute": 10,
+      "action": "warnAndThrottle"
+    },
+    "identityCheck": {
+      "anonymousMessage": "blockUnlessVerified"
+    }
+  },
+  "trustTriggers": {
+    "positiveFeedback": { "scoreBoost": +2 },
+    "flagCount": { "threshold": 3, "scorePenalty": -5 }
+  }
+}
