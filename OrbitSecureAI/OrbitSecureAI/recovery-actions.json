@@ -1,0 +1,22 @@
+{
+  "recoveries": [
+    {
+      "userId": "USER-01458",
+      "module": "OrbitDeliver",
+      "recoveryType": "Score regain after successful delivery",
+      "impact": "+4",
+      "timestamp": "2025-07-25T14:15:30Z",
+      "status": "Completed",
+      "notes": "Delivery confirmed by recipient and logistics node"
+    },
+    {
+      "userId": "USER-30941",
+      "module": "OrbitTrade",
+      "recoveryType": "Escrow audit cleared",
+      "impact": "+10",
+      "timestamp": "2025-07-25T14:19:42Z",
+      "status": "Pending score update",
+      "notes": "Escrow matched after manual review"
+    }
+  ]
+}
