@@ -1,0 +1,22 @@
+{
+  "escrowMismatch": {
+    "module": "OrbitTrade",
+    "severity": 15,
+    "description": "Escrow amount doesn't match goods or service expectations"
+  },
+  "fakeIdentity": {
+    "module": "OrbitConnect",
+    "severity": 40,
+    "description": "Invalid or falsified identity document submitted"
+  },
+  "lateDelivery": {
+    "module": "OrbitDeliver",
+    "severity": 5,
+    "description": "Package delivery exceeds agreed window without notification"
+  },
+  "loanDefault": {
+    "module": "OrbitFinance",
+    "severity": 25,
+    "description": "Loan repayment missed beyond allowable grace period"
+  }
+}
