@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OrbitGroups: Lounge View</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    .lounge { border: 2px solid #444; padding: 15px; margin-bottom: 20px; }
+    .header { font-weight: bold; color: #0072C6; }
+    .badge { background: #e0ffe0; padding: 3px 8px; border-radius: 5px; }
+    .status { font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>🛋 OrbitLounge: Trade & Talk</h1>
+
+  <div class="lounge">
+    <p class="header">💬 Lounge: Sellers & Couriers</p>
+    <p>Status: <span class="status">Public</span></p>
+    <p>Group Score: 73</p>
+    <p>Moderator: <span class="badge">Badge: Verified Contributor</span></p>
+    <button onclick="alert('Flagged user for spam')">🛡 Flag Message</button>
+    <button onclick="alert('Muted user for 24h')">🔇 Mute User</button>
+  </div>
+
+  <div class="lounge">
+    <p class="header">💬 Lounge: Moderators Forum</p>
+    <p>Status: <span class="status">Verified Only</span></p>
+    <p>Group Score: 88</p>
+    <p>Moderator: <span class="badge">Badge: OrbitSecureAI Certified</span></p>
+    <button onclick="alert('Access audit log')">📂 View Audit Log</button>
+  </div>
+</body>
+</html>
