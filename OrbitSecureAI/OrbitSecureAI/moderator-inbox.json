@@ -1,0 +1,26 @@
+{
+  "inbox": [
+    {
+      "moderatorId": "Admin-MGR-2",
+      "caseId": "CASE-00358",
+      "userId": "USER-03179",
+      "module": "OrbitConnect",
+      "event": "Fake identity submitted",
+      "status": "Pending Review",
+      "submittedOn": "2025-07-25T14:10:00Z",
+      "severity": 40,
+      "nextAction": "Review Appeal"
+    },
+    {
+      "moderatorId": "Admin-MGR-2",
+      "caseId": "CASE-00359",
+      "userId": "USER-30941",
+      "module": "OrbitTrade",
+      "event": "Escrow mismatch",
+      "status": "Review Complete",
+      "submittedOn": "2025-07-25T14:00:15Z",
+      "severity": 15,
+      "nextAction": "Confirm Recovery"
+    }
+  ]
+}
