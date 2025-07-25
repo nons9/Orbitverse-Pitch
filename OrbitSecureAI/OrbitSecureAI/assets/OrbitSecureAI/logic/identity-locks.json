@@ -1,0 +1,12 @@
+{
+  "lockTriggers": {
+    "scoreBelow": -40,
+    "repeatViolations": 3
+  },
+  "lockActions": ["accessRevoked", "notificationSent", "auditLogged"],
+  "recoveryPaths": {
+    "userAppeal": true,
+    "adminReview": true,
+    "kycResubmission": true
+  }
+}
