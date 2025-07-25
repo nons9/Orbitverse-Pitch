@@ -1,5 +1,5 @@
 OrbitVerse Holdings Inc.
-Africa’s logistics-tech ecosystem—connecting trade, delivery, finance, and trust.
+Africa’s logistics-tech ecosystem connecting trade, delivery, finance, and trust.
 
 Divisions
 [OrbitExpress • OrbitMart • OrbitTrade • OrbitGroups • OrbitFinance • OrbitSecure AI • OrbitAcademy • OrbitEvents • OrbitPartner Hub]
