@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OrbitExpress: Delivery Zone Tracker</title>
+  <style>
+    body { font-family: sans-serif; }
+    .zone { border: 2px dashed #0072C6; padding: 20px; margin-bottom: 10px; }
+    .status { font-weight: bold; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Delivery Route Monitor</h1>
+  <div class="zone">
+    <h3>Zone A – Residential</h3>
+    <p>Status: <span class="status">On Time</span></p>
+    <button onclick="alert('Violation Logged: Missed Pickup')">Simulate Missed Pickup</button>
+  </div>
+
+  <div class="zone">
+    <h3> Zone B – Market Hub</h3>
+    <p>Status: <span class="status">Rerouted</span></p>
+    <button onclick="alert('Deviation Logged')">Simulate Route Deviation</button>
+  </div>
+
+  <div class="zone">
+    <h3> Zone C – Industrial</h3>
+    <p>Status: <span class="status">Late Delivery</span></p>
+    <button onclick="alert('Score Deduction Triggered')">Simulate Complaint</button>
+  </div>
+</body>
+</html>
