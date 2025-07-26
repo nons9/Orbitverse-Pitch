@@ -2,49 +2,43 @@ name: Build Pitch Deck
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'pitch_deck/**'
-      - '.github/workflows/build-deck.yml'
-
-concurrency:
-  group: build-pitch-deck
-  cancel-in-progress: true
+      - '.github/workflows/deck.yml'
 
 jobs:
-  build:
+  build-pitch:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: true
+    - name: Checkout Repo
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js & cache
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
 
-      - name: Install Marp CLI
-        run: npm install -g @marp-team/marp-cli
+    - name: Install Marp CLI Locally
+      run: |
+        npm install @marp-team/marp-cli
 
-      - name: Render slide deck
-        run: |
-          marp pitch_deck/slides.md \
-            --theme moon \
-            --html \
-            --highlight-theme solarized-light \
-            -o docs/index.html
+    - name: Check Marp CLI Availability
+      run: |
+        npx marp --version || echo "Marp CLI not found"
 
-      - name: Commit & push built deck
-        run: |
-          git diff --quiet docs/index.html || {
-            git config user.name "OrbitBot"
-            git config user.email "actions@github.com"
-            git add docs/index.html
-            git commit -m "chore: auto-build pitch deck"
-            git push
-          }
+    - name: Build Deck from pitch_deck/
+      run: |
+        mkdir -p docs
+        npx marp pitch_deck/slides.md \
+          -o docs/index.html \
+          --theme moon --html --highlight-theme solarized-light
+
+    - name: Push Updated Deck to docs/
+      run: |
+        git config user.name "OrbitBot"
+        git config user.email "actions@github.com"
+        git add docs/
+        git commit -m "Auto-build deck from pitch_deck/"
+        git push origin main || echo "Nothing to commit"
