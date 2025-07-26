@@ -1,0 +1,28 @@
+/* orbitverse.css - OrbitVerse pitch branding */
+section {
+  background: #F7F9FB; /* Light trust canvas */
+  color: #111;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 32px;
+  padding: 40px;
+}
+
+section::after {
+  content: 'OrbitVerse – Africa’s Logistics Engine';
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  font-size: 20px;
+  color: #888;
+}
+
+h1, h2 {
+  color: #01579B; /* Orbit blue */
+}
+
+img.logo {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 120px;
+}
