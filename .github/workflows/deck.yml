@@ -1,0 +1,41 @@
+name: Build & Deploy Orbitverse Pitch Deck
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pitch_deck/**'
+      - '.github/workflows/deck.yml'
+
+jobs:
+  build-deck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # LTS version
+
+      - name: Install reveal-md
+        run: npm install --global reveal-md
+
+      - name: Build the deck
+        run: |
+          reveal-md pitch_deck/ \
+            --static docs/ \
+            --css pitch_deck/custom.css \
+            --theme moon \
+            --highlight-theme solarized-light \
+            --title "Orbitverse Pitch"
+
+      - name: Push updated deck
+        run: |
+          git config user.name "OrbitBot"
+          git config user.email "actions@github.com"
+          git add docs/
+          git commit -m "Auto-build deck from pitch_deck/"
+          git push origin main
