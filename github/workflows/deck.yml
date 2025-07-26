@@ -1,0 +1,33 @@
+name: Generate & Deploy Pitch Deck
+
+on:
+  push:
+    paths:
+      - 'investors/deck.md'
+
+jobs:
+  build-deck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Export PDF
+        run: marp investors/deck.md -o investors/deck.pdf
+
+      - name: Export HTML
+        run: marp investors/deck.md -o investors/deck.html
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: orbitverse-pitch-assets
+          path: investors/*.pdf
