@@ -1,0 +1,11 @@
+section {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f0f23;
+  color: #f2f2f2;
+}
+h1, h2 {
+  color: #00ffd8;
+}
+.reveal a {
+  color: #ffd700;
+}
