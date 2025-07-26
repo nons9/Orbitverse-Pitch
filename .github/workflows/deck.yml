@@ -1,45 +1,57 @@
-
 name: Build Pitch Deck
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'pitch_deck/**'
       - '.github/workflows/deck.yml'
 
+concurrency:
+  group: build-pitch-deck
+  cancel-in-progress: true
+
 jobs:
-  build-pitch:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Set up Node.js & cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
 
-    - name: Install Marp CLI + Puppeteer
-      run: |
-        npm install @marp-team/marp-cli puppeteer
+      - name: Install Marp CLI and Puppeteer
+        run: npm install @marp-team/marp-cli puppeteer
 
-    - name: Check Marp CLI Availability
-      run: |
-        npx marp --version || echo "Marp CLI not available"
+      - name: Verify Marp CLI
+        run: npx marp --version
 
-    - name: Build Deck from pitch_deck/
-      run: |
-        mkdir -p docs
-        npx marp pitch_deck/slides.md \
-          -o docs/index.html \
-          --theme moon --html --highlight-theme solarized-light
+      - name: Render pitch deck
+        run: |
+          mkdir -p docs
+          npx marp pitch_deck/slides.md \
+            --theme moon \
+            --html \
+            --highlight-theme solarized-light \
+            -o docs/index.html
 
-    - name: Push Updated Deck to docs/
-      run: |
-        git config user.name "OrbitBot"
-        git config user.email "actions@github.com"
-        git add docs/
-        git commit -m "Auto-build deck from pitch_deck/"
-        git push origin main || echo "Nothing to commit"
+      - name: Commit & push updated deck
+        run: |
+          if git diff --quiet docs; then
+            echo "No changes to commit"
+          else
+            git config user.name "OrbitBot"
+            git config user.email "actions@github.com"
+            git add docs
+            git commit -m "chore: auto-build pitch deck"
+            git push
+          fi
