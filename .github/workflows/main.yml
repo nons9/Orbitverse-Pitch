@@ -1,0 +1,41 @@
+name: Deploy Pitch Deck
+
+on:
+  push:
+    paths:
+      - pitch_deck/**
+      - pitch_deck/custom.css
+      - .github/workflows/main.yml
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install reveal-md
+        run: npm install --global reveal-md
+
+      - name: Build static deck
+        run: |
+          reveal-md pitch_deck/ \
+            --static docs/ \
+            --css pitch_deck/custom.css \
+            --theme moon \
+            --highlight-theme solarized-light \
+            --title "Orbitverse Pitch"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
