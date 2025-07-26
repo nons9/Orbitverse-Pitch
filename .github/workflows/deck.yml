@@ -34,8 +34,15 @@ jobs:
 
       - name: Push updated deck
         run: |
-          git config user.name "OrbitBot"
+          git config user. name "OrbitBot"
           git config user.email "actions@github.com"
           git add docs/
           git commit -m "Auto-build deck from pitch_deck/"
           git push origin main
+- name: Push updated deck
+  run: |
+    git config user.name "OrbitBot"
+    git config user.email "actions@github.com"
+    git add docs/
+    git commit -m "Auto-build deck from pitch_deck/"
+    git push origin main
