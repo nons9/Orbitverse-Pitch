@@ -32,17 +32,13 @@ jobs:
             --highlight-theme solarized-light \
             --title "Orbitverse Pitch"
 
-      - name: Push updated deck
-        run: |
-          git config user. name "OrbitBot"
-          git config user.email "actions@github.com"
-          git add docs/
-          git commit -m "Auto-build deck from pitch_deck/"
-          git push origin main
-- name: Push updated deck
+    - name: Push updated deck
   run: |
     git config user.name "OrbitBot"
     git config user.email "actions@github.com"
     git add docs/
+    git commit -m "Auto-build deck from pitch_deck/"
+    git push origin main || echo "Nothing to commit"
+
     git commit -m "Auto-build deck from pitch_deck/"
     git push origin main
