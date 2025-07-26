@@ -1,3 +1,4 @@
+
 name: Build Pitch Deck
 
 on:
@@ -20,13 +21,13 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install Marp CLI Locally
+    - name: Install Marp CLI + Puppeteer
       run: |
-        npm install @marp-team/marp-cli
+        npm install @marp-team/marp-cli puppeteer
 
     - name: Check Marp CLI Availability
       run: |
-        npx marp --version || echo "Marp CLI not found"
+        npx marp --version || echo "Marp CLI not available"
 
     - name: Build Deck from pitch_deck/
       run: |
